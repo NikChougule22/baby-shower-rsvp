@@ -5,7 +5,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Manrope", sans-serif;
   background: #eef6f8;
   color: #355f75;
 }
@@ -53,6 +53,7 @@ body {
 }
 
 .main-title {
+  font-family: "Cormorant Garamond", serif;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
@@ -94,37 +95,17 @@ body {
   color: #68818e;
 }
 
-.address-link {
-  display: inline-block;
+.address-text {
+  display: block;
   margin-top: 8px;
   color: #3c7694;
-  text-decoration: none;
   font-size: 15px;
   line-height: 1.5;
   font-weight: 600;
 }
 
-.address-link:hover {
-  text-decoration: underline;
-}
-
-.map-button {
-  display: inline-block;
-  margin-top: 14px;
-  text-decoration: none;
-  color: #ffffff;
-  background: #5aa8c7;
-  padding: 12px 16px;
-  border-radius: 14px;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.map-button:active {
-  transform: scale(0.98);
-}
-
 .section-title {
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 700;
