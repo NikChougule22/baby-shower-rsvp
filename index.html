@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garbh Sanskar & Baby Shower RSVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <div class="invite-card">
+      <img
+        src="images/invite.png"
+        alt="Garbh Sanskar and Baby Shower Invite"
+        class="invite-image"
+      />
+    </div>
+
+    <div class="details-card">
+      <div class="details-inner">
+        <div class="eyebrow">Join us for the</div>
+        <h1 class="main-title">Garbh Sanskar<br>& Baby Shower</h1>
+
+        <p class="subtext">Celebration of <span class="highlight">Sneha</span></p>
+        <p class="subtext">To shower your blessings!</p>
+        <p class="subtext">
+          At <span class="highlight">Jain Temple of Sacramento</span>
+        </p>
+
+        <div class="date-box">
+          <div class="date-line">29 March 2026</div>
+          <div class="time-line">From 11:00 AM onwards</div>
+        </div>
+
+        <a
+          class="address-link"
+          href="https://www.google.com/maps/search/?api=1&query=Jain+Temple+of+Sacramento+8360+Sheldon+Rd+Elk+Grove+CA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          8360 Sheldon Rd, Elk Grove, CA 95624
+        </a>
+
+        <a
+          class="map-button"
+          href="https://www.google.com/maps/search/?api=1&query=8360+Sheldon+Rd+Elk+Grove+CA+95624"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="rsvp-card">
+      <div class="rsvp-inner">
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-subtitle">
+          Please enter your name and let us know if you’ll be joining us.
+        </p>
+
+        <input
+          type="text"
+          id="guestName"
+          placeholder="Enter your full name"
+          autocomplete="name"
+        />
+
+        <div class="btn-group">
+          <button id="yesBtn" class="yes-btn" disabled>Attending</button>
+          <button id="noBtn" class="no-btn" disabled>Not Attending</button>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <div id="alreadyBox" class="already-box">
+          RSVP has already been submitted from this device.
+        </div>
+
+        <div class="footer-note">We can’t wait to celebrate with you 💙</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
