@@ -22,24 +22,15 @@
       />
     </div>
 
-    <div class="details-card">
-      <div class="details-inner">
-        <div class="eyebrow">Join us for the</div>
-        <h1 class="main-title">Garbh Sanskar<br />& Baby Shower</h1>
-
-        <p class="subtext">Celebration of <span class="highlight">Sneha</span></p>
-        <p class="subtext">To shower your blessings!</p>
-        <p class="subtext">
-          At <span class="highlight">Jain Temple of Sacramento</span>
-        </p>
-
-        <div class="date-box">
-          <div class="date-line">29 March 2026</div>
-          <div class="time-line">From 11:00 AM onwards</div>
-        </div>
-
-        <div class="address-text">8360 Sheldon Rd, Elk Grove, CA 95624</div>
-      </div>
+    <div class="address-card">
+      <a
+        class="address-link"
+        href="https://www.google.com/maps/search/?api=1&query=8360+Sheldon+Rd+Elk+Grove+CA+95624"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Address: 8360 Sheldon Rd, Elk Grove, CA 95624
+      </a>
     </div>
 
     <div class="rsvp-card">
@@ -54,6 +45,15 @@
           id="guestName"
           placeholder="Enter your full name"
           autocomplete="name"
+        />
+
+        <input
+          type="number"
+          id="guestCount"
+          placeholder="Number of people joining"
+          min="1"
+          step="1"
+          inputmode="numeric"
         />
 
         <div class="btn-group">

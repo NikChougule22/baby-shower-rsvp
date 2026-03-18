@@ -1,4 +1,5 @@
 const guestName = document.getElementById("guestName");
+const guestCount = document.getElementById("guestCount");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const statusBox = document.getElementById("status");
@@ -28,6 +29,7 @@ function setSubmitted() {
 
 function disableFormPermanently() {
   guestName.disabled = true;
+  guestCount.disabled = true;
   yesBtn.disabled = true;
   noBtn.disabled = true;
   alreadyBox.style.display = "block";
@@ -46,6 +48,7 @@ function updateButtons() {
 
 function setBusyState(message) {
   guestName.disabled = true;
+  guestCount.disabled = true;
   yesBtn.disabled = true;
   noBtn.disabled = true;
   statusBox.textContent = message;
@@ -53,6 +56,7 @@ function setBusyState(message) {
 
 function restoreEditableState() {
   guestName.disabled = false;
+  guestCount.disabled = false;
   updateButtons();
 }
 
@@ -64,10 +68,20 @@ async function submitRSVP(choice) {
 
   const name = guestName.value.trim();
   const deviceId = getOrCreateDeviceId();
+  const parsedCount = Number.parseInt(guestCount.value, 10);
+  let peopleCount = 0;
 
   if (!name) {
     statusBox.textContent = "Please enter your name first.";
     return;
+  }
+
+  if (choice === "Attending") {
+    if (!Number.isInteger(parsedCount) || parsedCount < 1) {
+      statusBox.textContent = "Please enter number of people joining.";
+      return;
+    }
+    peopleCount = parsedCount;
   }
 
   setBusyState("Submitting RSVP...");
@@ -76,7 +90,8 @@ async function submitRSVP(choice) {
     const body = new URLSearchParams({
       name: name,
       rsvp: choice,
-      deviceId: deviceId
+      deviceId: deviceId,
+      peopleCount: String(peopleCount)
     });
 
     const response = await fetch(SCRIPT_URL, {
@@ -107,6 +122,7 @@ async function submitRSVP(choice) {
 }
 
 guestName.addEventListener("input", updateButtons);
+guestCount.addEventListener("input", updateButtons);
 yesBtn.addEventListener("click", () => submitRSVP("Attending"));
 noBtn.addEventListener("click", () => submitRSVP("Not Attending"));
 

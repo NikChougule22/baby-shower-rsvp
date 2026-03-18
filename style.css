@@ -22,7 +22,7 @@ body {
 }
 
 .invite-card,
-.details-card,
+.address-card,
 .rsvp-card {
   background: rgba(255,255,255,0.97);
   border-radius: 22px;
@@ -38,70 +38,23 @@ body {
   background: #f5fbfd;
 }
 
-.details-inner,
+.address-card,
 .rsvp-inner {
   padding: 20px 16px;
   text-align: center;
 }
 
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #6c95a5;
-  margin-bottom: 8px;
-}
-
-.main-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #3c7694;
-  margin: 0 0 10px;
-}
-
-.subtext {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #5f7987;
-  margin: 0 0 10px;
-}
-
-.highlight {
-  font-weight: 700;
-  color: #3c7694;
-}
-
-.date-box {
-  margin: 16px auto 12px;
-  padding: 12px 14px;
-  max-width: 290px;
-  border-radius: 14px;
-  background: #f2f9fb;
-  border: 1px solid #d8ebf1;
-}
-
-.date-line {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #3c7694;
-  margin-bottom: 6px;
-}
-
-.time-line {
-  font-size: 14px;
-  color: #68818e;
-}
-
-.address-text {
-  display: block;
-  margin-top: 8px;
+.address-link {
+  display: inline-block;
   color: #3c7694;
   font-size: 15px;
   line-height: 1.5;
   font-weight: 600;
+  text-decoration: none;
+}
+
+.address-link:hover {
+  text-decoration: underline;
 }
 
 .section-title {
@@ -120,7 +73,8 @@ body {
   line-height: 1.5;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   width: 100%;
   padding: 14px;
   border-radius: 14px;
@@ -131,7 +85,8 @@ input[type="text"] {
   background: #fff;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
   border-color: #7ab4cb;
   box-shadow: 0 0 0 3px rgba(122,180,203,0.18);
 }
@@ -202,15 +157,7 @@ button:active {
     padding: 12px 10px 24px;
   }
 
-  .main-title {
-    font-size: 26px;
-  }
-
   .section-title {
-    font-size: 22px;
-  }
-
-  .date-line {
     font-size: 22px;
   }
 }
